@@ -1,0 +1,18 @@
+import discord
+from discord.ext import commands
+intents = discord.Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix='$', intents=intents)
+@bot.event
+async def en_linea():
+    print(f'Tu bot {bot.user} esta en linea!')
+    
+@bot.command()
+async def contaminacion(ctx):
+    await ctx.send("quieres saber sobre la contaminacion jeje, esa es mi especialidad, un ejemplo de contaminacion son los desechos que encontaras en todas las provincias de costa rica ya que en el pais en cualquier calle encontraras basura gracias a la gente que no respeta que es un lugar publico y eso nos afecta en varios factores por ejemplo, la fauna muere al igual que la flora y que el pais muere poco a poco gracias a eso")
+
+
+
+token =""
+
+bot.run(token)
